@@ -1,0 +1,30 @@
+---
+- hosts: localhost
+  tasks:
+  - name: Delete Hello World Application
+    shell: |
+      kubectl delete -f deployment.yaml
+      kubectl delete -f service.yaml
+      kubectl delete -f ingress.yaml
+    ignore_errors: yes
+    retries: 5
+    delay: 10
+
+  - name: Remove self-signed certificate
+    shell: |
+      rm -rf tls.*
+    ignore_errors: yes
+
+  - name: Delete Kubernetes secret for TLS
+    shell: |
+      kubectl delete secret tls-secret
+    ignore_errors: yes
+    retries: 3
+    delay: 10
+
+  - name: Delete Nginx Ingress Controller
+    shell: |
+      helm uninstall my-nginx-ingress
+    ignore_errors: yes
+    retries: 3
+    delay: 10
