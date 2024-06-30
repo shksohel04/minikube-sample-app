@@ -44,3 +44,12 @@
     ignore_errors: yes
     retries: 3
     delay: 10
+  
+  - name: Installing & starting minikube
+    shell: |
+      curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+      sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-amd64
+      minikube start
+    ignore_errors: yes
+    retries: 3
+    delay: 10
