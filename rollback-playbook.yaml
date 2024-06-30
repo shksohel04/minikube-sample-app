@@ -12,7 +12,7 @@
 
   - name: Remove self-signed certificate
     shell: |
-      rm -rf tls.*
+      rm -rf tls.key tls.crt
     ignore_errors: yes
 
   - name: Delete Kubernetes secret for TLS
