@@ -10,7 +10,7 @@ This repository contains all the necessary files and instructions to set up a Ku
 4. [Sample Application Deployment](#sample-application-deployment)
 5. [Ansible Automation](#ansible-automation)
 6. [Security with TLS/SSL](#security-with-tlsssl)
-7. [Steps to Run playbook](#Steps-to-Run -playbook)
+7. [Steps to Run playbook](#Steps-to-Run-playbook)
 8. [Repository Structure](#repository-structure)
 
 
