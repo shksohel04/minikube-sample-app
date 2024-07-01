@@ -8,10 +8,9 @@ This repository contains all the necessary files and instructions to set up a Ku
 2. [Kubernetes Cluster Setup](#kubernetes-cluster-setup)
 3. [Nginx Ingress Setup](#nginx-ingress-setup)
 4. [Sample Application Deployment](#sample-application-deployment)
-5. [Ansible Automation](#ansible-automation)
-6. [Security with TLS/SSL](#security-with-tlsssl)
-7. [Steps to Run playbook](#Steps-to-Run-playbook)
-8. [Repository Structure](#repository-structure)
+5. [Security with TLS/SSL](#security-with-tlsssl)
+6. [Ansible Automation](#ansible-automation)
+7. [Repository Structure](#repository-structure)
 
 ## Pre-requisite
 
@@ -78,21 +77,7 @@ Deploy the "Hello World" application:
    kubectl apply -f service.yaml
    kubectl apply -f ingress.yaml
    ```
-
-## Ansible Automation
-
-The Ansible playbook automates the deployment process.
-
-1. **Run the playbook:**
-
-   ```bash
-   ansible-playbook playbook.yaml
-   ```
-3. **Rollback playbook:**
-
-   ```bash
-   ansible-playbook rollback-playbook.yaml
-   ```
+3. 
 
 ## Security with TLS/SSL
 
@@ -109,7 +94,7 @@ The playbook also handles TLS termination using a self-signed certificate.
    kubectl create secret tls tls-secret --key tls.key --cert tls.crt
    ```
 
-## Steps to Run playbook
+## Ansible Automation
 
 ### How to Run the Ansible Playbook
 
