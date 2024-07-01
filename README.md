@@ -13,25 +13,22 @@ This repository contains all the necessary files and instructions to set up a Ku
 7. [Steps to Run playbook](#Steps-to-Run-playbook)
 8. [Repository Structure](#repository-structure)
 
-
 ## Pre-requisite
 
-1. **Docker**
+1. **Ansible**
+2. **Docker**
+3. **Kubectl**
+4. **Helm**
+5. **Minikube**
 
-2. **Kubectl**
-
-3. **Helm**
-
-4. **Minikube**
-
-**To install above run the setup-tools.yaml playbook**
+**To install above run script-to-install-ansible.sh & setup-tools.yaml scripts**
 
 **Setup required tools:**
 
 ```bash
+bash script-to-install-ansible.sh
 ansible-playbook setup-tools.yaml
 ```
-
 
 ## Kubernetes Cluster Setup
 
@@ -86,15 +83,7 @@ Deploy the "Hello World" application:
 
 The Ansible playbook automates the deployment process.
 
-1. **Install Ansible:**
-
-   ```bash
-   sudo apt update
-   sudo apt install software-properties-common
-   sudo add-apt-repository --yes --update ppa:ansible/ansible
-   sudo apt install ansible -y
-   ```
-2. **Run the playbook:**
+1. **Run the playbook:**
 
    ```bash
    ansible-playbook playbook.yaml
@@ -129,7 +118,7 @@ The playbook also handles TLS termination using a self-signed certificate.
    ```bash
    ansible-playbook playbook.yaml
    ```
-3. **Access the application:**
+2. **Access the application:**
 
    - Visit `https://example.com` in your web browser.
 
@@ -141,8 +130,6 @@ The playbook also handles TLS termination using a self-signed certificate.
   - **Solution:** Check Helm logs for detailed error messages.
 - **Issue:** Application not accessible via ingress.
   - **Solution:** Verify the ingress and service configurations.
-
-
 
 ## Repository Structure
 
